@@ -7,3 +7,22 @@
 .product img{
     width: 250px;
 }
+.product-details{
+    text-align: start;
+    margin-left: 10px;
+}
+.product-name{
+    color: blue;
+}
+.addToCart{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #ff9900;
+    cursor: pointer;
+}
+.addToCart:hover{
+    background-color: goldenrod;
+}
