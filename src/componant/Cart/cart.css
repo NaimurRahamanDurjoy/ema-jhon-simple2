@@ -1,0 +1,16 @@
+.order-details{
+    text-align: start;
+    margin-left: 10px;
+}
+.review-order{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #ff9900;
+    cursor: pointer;
+}
+.review-order:hover{
+    background-color: goldenrod;
+}
