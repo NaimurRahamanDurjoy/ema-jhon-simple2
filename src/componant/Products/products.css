@@ -6,6 +6,7 @@
 }
 .product img{
     width: 250px;
+    border-radius: 5px;
 }
 .product-details{
     text-align: start;
