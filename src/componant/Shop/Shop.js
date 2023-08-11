@@ -25,8 +25,10 @@ const Shop = () => {
             const savedProducts = getShoppingCart();
             let storedProduct = [];
             for(const id in savedProducts){
-                const matchedProduct = products.filter(product => product.id === id);
-                storedProduct.push(matchedProduct[0]);
+                const matchedProducts = products.filter(product => product.id === id);
+                const quantity = savedProducts[id];
+                matchedProducts[0].quantity = quantity;
+                storedProduct.push(matchedProducts[0]);
             }
             setCart(storedProduct);
         }
