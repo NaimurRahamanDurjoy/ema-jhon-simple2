@@ -33,24 +33,32 @@ const Shop = () => {
             setCart(storedProduct);
         }
     }, [products])
+
     return (
-        <div className='shop-container'>
-            <div className="product-container">
-                {
-                    products.map(product => <Products 
-                        key = {product.id}
-                        product = {product}
-                        handleAddToCart = {handleAddToCart}
-                    ></Products>)
-                }
+
+        <>
+            <div className="search-product">
+                <input type="text" placeholder='Search Product' />
             </div>
-            {/* Shopping cart */}
-            <div className="cart-container">
-                <Cart cart = {cart}></Cart>
+            <div className='shop-container'>
+                <div className="product-container">
+                    {
+                        products.map(product => <Products 
+                            key = {product.id}
+                            product = {product}
+                            handleAddToCart = {handleAddToCart}
+                        ></Products>)
+                    }
+                </div>
+                {/* Shopping cart */}
+                <div className="cart-container">
+                    <Cart cart = {cart}></Cart>
+
+                </div>
 
             </div>
 
-        </div>
+        </>
     );
 };
 

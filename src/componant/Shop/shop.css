@@ -1,3 +1,12 @@
+.search-product{
+    background-color: rgba(0, 0, 0, 0.753);
+    line-height: 50px;
+}
+.search-product input{
+    width: 75%;
+    padding: 5px;
+    margin-left: 10px;
+}
 .shop-container{
     display: grid;
     grid-template-columns: 3fr 1fr;
