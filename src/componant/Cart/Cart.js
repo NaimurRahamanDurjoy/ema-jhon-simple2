@@ -3,12 +3,12 @@ import './cart.css';
 
 const Cart = (props) => {
     const cart = props.cart;
-    let totalItemsPrice = 0;
-    for(const product of cart){
-        totalItemsPrice = totalItemsPrice + product.price;
-
-        
-    }
+    // let totalItemsPrice = 0;
+    // for(const product of cart){
+    //     totalItemsPrice = totalItemsPrice + product.price;    
+    // }
+    const totalItemsPrice = cart.reduce((previous, product) => previous + product.price, 0);
+    
     const shipping = (totalItemsPrice * 5) / 100;
     const tax = (totalItemsPrice * 200) / 100;
     const totalPrice = totalItemsPrice + shipping + tax;
