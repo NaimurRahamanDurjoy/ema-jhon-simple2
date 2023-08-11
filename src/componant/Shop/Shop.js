@@ -21,12 +21,16 @@ const Shop = () => {
     }
 
     useEffect( () => {
-        const savedProducts = getShoppingCart();
-        for(const id in savedProducts){
-            const matchedProduct = products.filter(product => product.id === id);
-            console.log(matchedProduct);
+        if(products.length){
+            const savedProducts = getShoppingCart();
+            let storedProduct = [];
+            for(const id in savedProducts){
+                const matchedProduct = products.filter(product => product.id === id);
+                storedProduct.push(matchedProduct[0]);
+            }
+            setCart(storedProduct);
         }
-    }, [])
+    }, [products])
     return (
         <div className='shop-container'>
             <div className="product-container">
